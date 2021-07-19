@@ -1,15 +1,20 @@
-import React from 'react';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import { Redirect, Route, Router, Switch } from 'react-router-dom'
+import React from "react";
+import { createTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { Redirect, Route, Router, Switch } from "react-router-dom";
 // import logo from './logo.svg';
-import { createBrowserHistory } from 'history';
-import LoginView from './views/LoginView';
-import './App.css';
+import { createBrowserHistory } from "history";
+import LoginView from "./views/LoginView";
+// pages for this product
+import Components from "views/Components/Components.js";
+import LandingPage from "views/LandingPage/LandingPage.js";
+import ProfilePage from "views/ProfilePage/ProfilePage.js";
+import LoginPage from "views/LoginPage/LoginPage.js";
+// import "./App.css";
 
 const hist = createBrowserHistory();
 
 function App() {
-  const theme = createMuiTheme({
+  const theme = createTheme({
     palette: {
       primary: {
         main: "#2196F3",
@@ -42,11 +47,25 @@ function App() {
       <MuiThemeProvider theme={theme}>
         <Router history={hist}>
           <Switch>
-            <Route path='/login' component={LoginView} />
-            <Redirect from='/' to='/login' />
+            <Route path="/login" component={LoginView} />
+            <Route path="/landing-page" component={LandingPage} />
+            <Route path="/profile-page" component={ProfilePage} />
+            <Route path="/login-page" component={LoginPage} />
+            <Route path="/" component={Components} />
+            <Redirect from="/" to="/login" />
           </Switch>
         </Router>
       </MuiThemeProvider>
+      {/* <Router history={hist}>
+        <Switch>
+          <Route path='/login' component={LoginView} />
+          <Route path="/landing-page" component={LandingPage} />
+          <Route path="/profile-page" component={ProfilePage} />
+          <Route path="/login-page" component={LoginPage} />
+          <Route path="/" component={Components} />
+          <Redirect from='/' to='/login' />
+        </Switch>
+      </Router> */}
     </div>
   );
 }
