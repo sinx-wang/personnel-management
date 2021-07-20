@@ -5,10 +5,11 @@ import { Redirect, Route, Router, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import LoginView from "./views/LoginView";
 // pages for this product
-import Components from "views/Components/Components.js";
+// import Components from "views/Components/Components.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
+import DashBoard from "layouts/DashBoard.jsx";
 // import "./App.css";
 
 const hist = createBrowserHistory();
@@ -51,7 +52,8 @@ function App() {
             <Route path="/landing-page" component={LandingPage} />
             <Route path="/profile-page" component={ProfilePage} />
             <Route path="/login-page" component={LoginPage} />
-            <Route path="/" component={Components} />
+            <Route path="/test" component={DashBoard} />
+            {/* <Route path="/" component={Components} /> */}
             <Redirect from="/" to="/login" />
           </Switch>
         </Router>

@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 功能
+
+### 表格项
+
+序号 姓名 所在团队 工作 办公区域 居住地 通勤方式 14天内中高风险地区 是否满足返岗要求 到岗时间 离岗时间 备注 到岗人数 同比变化
+
 ## Available Scripts
 
 In the project directory, you can run:
