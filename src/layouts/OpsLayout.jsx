@@ -5,7 +5,7 @@ import Container from "@material-ui/core/Container";
 import { Switch, Route } from "react-router-dom";
 import TitleBar from "components/TitleBar";
 import SideBar from "components/SideBar";
-import Routes from "routes/TeamManager";
+import Routes from "routes/OpsRoute";
 
 const drawerWidth = 240;
 
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
 const switchRoutes = (
   <Switch>
     {Routes.map((item) => {
-      if (item.layout === "/team") {
+      if (item.layout === "/ops") {
         return (
           <Route
             path={item.layout + item.path}
@@ -97,7 +97,7 @@ const switchRoutes = (
   </Switch>
 );
 
-export default function CaseListLayout(props) {
+export default function OpsListLayout(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
@@ -111,7 +111,7 @@ export default function CaseListLayout(props) {
       {/* 顶部状态栏 */}
       <TitleBar
         open={open}
-        content={"项目组人员管理"}
+        content={"运维情况记录"}
         handleClickMenuButton={handleClickMenuButton}
         {...props}
       />

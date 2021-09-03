@@ -3,27 +3,28 @@ import HistoryIcon from "@material-ui/icons/History";
 // import CheckBoxOutlined from "@material-ui/icons/CheckBoxOutlined";
 // import CheckBox from "@material-ui/icons/CheckBox";
 import CollectionsBookmark from "@material-ui/icons/CollectionsBookmark";
+import TeamManagerPage from "views/TeamManagerPage/TeamManagerPage";
 
 let casesRoutes = [
   {
     path: "/tomorrowCome",
     name: "预计到岗",
     icon: EventNoteIcon,
-    layout: "/cases",
-    // component: WaitToDealCasesView,
+    layout: "/team",
+    component: TeamManagerPage,
   },
   {
     path: "/comeLog",
     name: "到岗记录",
     icon: HistoryIcon,
-    layout: "/cases",
+    layout: "/team",
     // component: DealingCasesView,
   },
   {
     path: "/checkIn",
     name: "个人打卡",
     icon: CollectionsBookmark,
-    layout: "/cases",
+    layout: "/team",
     // component: DealingCasesView,
   },
 ];

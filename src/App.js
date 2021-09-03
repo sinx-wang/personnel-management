@@ -9,7 +9,8 @@ import LoginView from "./views/LoginView";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
-import DashBoard from "layouts/DashBoard.jsx";
+// import DashBoard from "layouts/DashBoard.jsx";
+import OpsLayout from "layouts/OpsLayout";
 // import "./App.css";
 
 const hist = createBrowserHistory();
@@ -52,7 +53,7 @@ function App() {
             <Route path="/landing-page" component={LandingPage} />
             <Route path="/profile-page" component={ProfilePage} />
             <Route path="/login-page" component={LoginPage} />
-            <Route path="/test" component={DashBoard} />
+            <Route path="/ops" component={OpsLayout} />
             {/* <Route path="/" component={Components} /> */}
             <Redirect from="/" to="/login" />
           </Switch>
